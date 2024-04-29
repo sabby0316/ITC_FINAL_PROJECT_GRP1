@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gangnam Threads</title>
+    <link rel="stylesheet" href="aboutstyle.css">
+	<link rel="stylesheet" href="wcustyle.css">
+	<link rel="stylesheet" href="contactstyle.css">
+	 <script src="wcuscript.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<style>
+	* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .center {
+            position: absolute;
+            top: 97%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3284ed;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1e6edc;
+        }
+
+        .popup {
+            position: fixed;
+            top: 100vh;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: top 0ms ease-in-out 300ms;
+        }
+
+        .popup .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 100ms ease-in-out 200ms;
+        }
+
+        .popup .popup-content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 1000px; /* Adjusted width */
+		max-width: 4000px; /* Adjusted max-width */
+		max-height: 4000px; /* Adjusted max-width */
+		background: #fff;
+		padding: 25px;
+		border-radius: 20px;
+		box-shadow: 0 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+        .popup .popup-content h2 {
+            margin: 10px 0;
+            font-size: 25px;
+            color: #111;
+            text-align: center;
+        }
+
+        .popup .popup-content p {
+            margin: 15px 0;
+            font-size: 16px;
+            color: #222;
+            text-align: center;
+        }
+
+        .popup .popup-content .controls {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 0;
+        }
+
+        .popup .popup-content .controls button {
+            padding: 10px 20px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .popup .popup-content .controls .close-btn {
+            background: transparent;
+            color: #3284ed;
+        }
+
+        .popup.active {
+            top: 0;
+            transition: top 0ms ease-in-out 0ms;
+        }
+
+        .popup.active .overlay {
+            opacity: 1;
+            transition: all 300ms ease-in-out;
+        }
+
+        .popup.active .popup-content {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+		ul {
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+		
+	</style>
+</head>
+<body>
+
+
+<header>
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>  
+    <a href="#" class="logo">Gangnam Threads<span>.</span></a>
+    <nav class="navbar">
+        <a href="landing.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="review.html">Review</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="index.html" class="fas fa-user"></a>
+    </div>
+</header>
+
+<section class="about" id="about">
+    <h1 class="heading"><span>about</span> us</h1>
+    <div class="row">
+        <div class="video-container">
+            <video src="about.mp4" loop autoplay muted></video>
+            <h3>why choose us</h3>
+            <div class="text">
+                <p>Welcome to Gangnam Threads, where sophistication meets style in every stitch. Here's why discerning fashionistas and trendsetters choose us for their apparel and accessories needs:</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="center">
+    <button id="open-popup" class="btn"> Learn More</button>
+</div>
+
+<div class="popup" id="popup">
+    <div class="overlay"></div>
+    <div class="popup-content">
+        <h2> Why Choose Us </h2>
+        <ul>
+			<li><strong>Gangnam Chic:</strong> Inspired by the affluent district of Gangnam in Seoul, South Korea, our brand embodies the essence of its sophisticated and cosmopolitan style. Each piece in our collection reflects the sleek, modern, and upscale vibe of Gangnam, making you stand out wherever you go.</li>
+			<li><strong>Uncompromising Quality:</strong> We believe that true style begins with quality craftsmanship. That's why we meticulously source the finest materials and fabrics to ensure that every garment, accessory, and bag bearing the Gangnam Threads label exudes luxury and durability. Our commitment to quality means you can confidently invest in pieces that will last a lifetime.</li>
+			<li><strong>Timeless Elegance:</strong> At Gangnam Threads, we don't chase fleeting trends; instead, we offer timeless pieces that transcend seasons. Whether you're looking for a classic tailored suit for a formal affair or a chic dress for a night out, our curated collection effortlessly combines elegance with contemporary flair.</li>
+			<li><strong>Diverse Selection:</strong> From sleek suits and sophisticated dresses to trendy accessories and statement bags, Gangnam Threads offers a diverse selection to suit every style and occasion. Whether you're dressing for a boardroom meeting or a glamorous gala, you'll find the perfect ensemble to express your unique personality.</li>
+			<li><strong>Empowering Confidence:</strong> We believe that fashion is more than just clothing—it's a form of self-expression that empowers individuals to feel confident and stylish. With Gangnam Threads, you'll not only look your best but also feel empowered to conquer the world with poise and sophistication.</li>
+			<li><strong>Exceptional Service:</strong> Your satisfaction is our top priority. From personalized styling advice to hassle-free returns, our dedicated team is here to ensure that your shopping experience with Gangnam Threads is nothing short of exceptional. We're committed to providing attentive service that exceeds your expectations at every turn.</li>
+			<p>Experience the epitome of Gangnam style and sophistication with Gangnam Threads. Elevate your wardrobe with our premium collection of apparel, accessories, and bags, and step into a world where fashion knows no bounds. Choose Gangnam Threads and embrace the allure of timeless elegance today.</p>
+		</ul>
+        <div class="controls">
+            <button class="close-btn">Close</button>
+        </div>
+    </div>
+</div>
+<section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="landing.html">home</a>
+                <a href="#">about</a>
+                <a href="products.html">products</a>
+                <a href="review.html">review</a>
+                <a href="contacts.html">contacts</a>
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="main.html">my account</a>
+                <a href="#">my order</a>
+                <a href="#">my favorite</a>
+                
+            </div>
+
+            <div class="box">
+                <h3>locations</h3>
+                <a href="#">india</a>
+                <a href="#">usa</a>
+                <a href="#">japan</a>
+                <a href="#">france</a>
+                <a href="#">philipines</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">0912 345 6789</a>
+                <a href="#">example@gmail.com</a>
+                <a href="#">Pasig, Philipines - 1010101</a>
+                <img src="image/payment.png" alt="">
+                
+            </div>
+
+        </div>
+
+        <div class="credit"> created by <span> Group 1 Hayst </span> | all rights reserved </div>
+
+    </section>
+</body>
+</html>
